@@ -19,4 +19,4 @@ print(f['entries'][0].media_content[1]) """
 """ Get specific data for multiple entries """
 for feedentry in f.entries:
     print(feedentry.title)
-    print(feedentry.get("media_content[1]" , ""))
+    print(feedentry.media_content[1])
