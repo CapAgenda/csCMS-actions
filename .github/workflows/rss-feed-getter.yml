@@ -3,7 +3,7 @@
 
 name: 'RSS feed to GitHub Repo'
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 description: 'A GitHub action that pulls images and titles from an RSS feed and places the information into a designated GitHub Repository'
 inputs:
