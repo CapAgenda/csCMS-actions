@@ -1,6 +1,6 @@
 import feedparser
 
-allurls = 'https://comicstripblog.com/feed/?page='
+allurls = 'https://comicstripblog.com/feed/?paged='
 
 i=1
 while (i<=5):
