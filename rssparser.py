@@ -17,13 +17,6 @@ while (i<=5):
     i=i+1
 else:
     print("End of the loop")
-<<<<<<< HEAD
-
-#print list
-print (comiclist)
- 
-=======
->>>>>>> 2a5ada2510aff62d22c5c245685c1a713974cfea
-
+        
 #print list
 print (comiclist)
