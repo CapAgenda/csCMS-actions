@@ -1,0 +1,22 @@
+name: Image pusher
+description: push images from wordpress blog to github repo folder 
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v3
+
+      - name: Pushes test file
+      - uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png'
+        destination_repo: 'CapAgenda/cscms-actions'
+        destination_folder: 'images'
+        user_email: 'USER_EMAIL'
+        user_name: 'CapAgenda'
+        commit_message: 'Image uploaded'
