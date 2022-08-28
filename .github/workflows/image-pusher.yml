@@ -2,7 +2,7 @@ name: Image pusher
 description: push images from wordpress blog to github repo folder 
 on: push
 jobs:
-  build:
+  copy-file:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
