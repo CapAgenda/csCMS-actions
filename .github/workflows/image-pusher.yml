@@ -8,10 +8,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-  
-    - name: Download a file
+
+    - name: Download single file
       uses: carlosperate/download-file-action@v1
-      id: download-file
       with:
         file-url: https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png
         location: './images'
