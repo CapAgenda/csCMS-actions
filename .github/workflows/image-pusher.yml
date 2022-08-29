@@ -3,15 +3,10 @@ name: Image pusher
 on: push
 
 jobs:
-  copy-file:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Download a file
-      uses: carlosperate/download-file-action@v1
-      with:
-        file-url: https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png
-        location: './images'
+  - name: Download a file
+  uses: carlosperate/download-file-action@v1
+  id: download-file
+  with:
+    file-url: https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png
+    location: './images'
         
