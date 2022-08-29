@@ -12,8 +12,10 @@ jobs:
     - name: Download single file
       uses: carlosperate/download-file-action@v1
       with:
-        file-url: https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png
-        location: './images'
+        file-url: https://csbartblog.files.wordpress.com/2022/08/untitled111.png
 
     - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        repository: ./images
+
         
