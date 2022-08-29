@@ -9,7 +9,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
   
-  Download-file:
     - name: Download a file
       uses: carlosperate/download-file-action@v1
       id: download-file
@@ -17,6 +16,5 @@ jobs:
         file-url: https://csbartblog.files.wordpress.com/2022/06/untitled8028129.png
         location: './images'
 
-  Commit-file:
     - uses: stefanzweifel/git-auto-commit-action@v4
         
