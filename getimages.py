@@ -45,7 +45,9 @@ def download_image(location, file_name):
     #send GET request
     response = requests.get(location)
     #write file using extension
-    with open(file_name+'.'+extension[1], "wb") as f:
+    file_name = file_name +'.'+ extension[1]
+    dir_path = 'images'
+    with open(os.path.join(dir_path, file_name), "wb") as f:
             f.write(response.content)
     
 # initializing bad_chars_list
