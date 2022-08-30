@@ -1,8 +1,6 @@
 from urllib import response
 import feedparser
 import requests
-import urllib
-import concurrent.futures
 import os
 
 allurls = 'https://comicstripblog.com/feed/?paged='
@@ -12,7 +10,7 @@ comiclist = []
 
 # Loop through pages of feeds and add dictionary of title:url for each comic
 i=1
-while (i<=1):
+while (i<=5):
     urlpage = (allurls + str(i))
     f = feedparser.parse(urlpage)
     for feedentry in f.entries:
