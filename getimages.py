@@ -8,7 +8,7 @@ allurls = 'https://comicstripblog.com/feed/?paged='
 #Create empty list
 comiclist = []
 
-# Loop through pages of feeds and add dictionary of title:url for each comic
+# Loop through pages of feeds and add to list the title and url for each comic
 i=1
 while (i<=5):
     urlpage = (allurls + str(i))
@@ -24,14 +24,6 @@ else:
 #print list
 """ print (comiclist) """
 
-# list of only the urls
-""" comicurls = "url"
-list_of_urls = [comic_dict[comicurls] for comic_dict in comiclist]
- """
-# List of only the titles
-"""comictitles = "title"
-list_of_titles = [comic_dict[comictitles] for comic_dict in comiclist]
- """
 #function that downloads a file and saves it 
 def download_image(location, file_name):
     # determine and get filetype extension
@@ -54,7 +46,8 @@ bad_chars = [';', ':', '!', "*", "?"]
 #download the files
 for item in comiclist:
     location = item[1]
+    #Remove bad chars from file name
     file_name = ''.join(b for b in item[0] if not b in bad_chars)
-   #Run download function  
+    #Run download function  
     download_image(location, str(file_name))
 
